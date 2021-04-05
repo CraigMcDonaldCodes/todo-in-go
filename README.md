@@ -1,2 +1,3 @@
-# todo-in-go
-Todo web app in Go
+# Todo in Go
+
+Todo web app in Go.
