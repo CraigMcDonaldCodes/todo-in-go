@@ -15,6 +15,7 @@ func main() {
 	http.HandleFunc("/add", handlers.Add)
 	http.HandleFunc("/delete", handlers.Delete)
 	http.HandleFunc("/purge", handlers.Purge)
+	http.HandleFunc("/login", handlers.Login)
 
 	http.ListenAndServe("localhost:8080", nil)
 }

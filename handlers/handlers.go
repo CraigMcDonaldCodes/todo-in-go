@@ -23,3 +23,8 @@ func Delete(res http.ResponseWriter, req *http.Request) {
 func Purge(res http.ResponseWriter, req *http.Request) {
 	res.Write([]byte("Purge todo page"))
 }
+
+// Login is the handler to delete all todo entries
+func Login(res http.ResponseWriter, req *http.Request) {
+	res.Write([]byte("Login todo page"))
+}
