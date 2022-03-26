@@ -11,11 +11,18 @@ func main() {
 
 	utils.DisplayBanner()
 
-	http.HandleFunc("/", handlers.Home)
-	http.HandleFunc("/add", handlers.Add)
-	http.HandleFunc("/delete", handlers.Delete)
-	http.HandleFunc("/purge", handlers.Purge)
-	http.HandleFunc("/login", handlers.Login)
+	mux := http.NewServeMux()
 
-	http.ListenAndServe("localhost:8080", nil)
+	mux.HandleFunc("/", handlers.Home)
+	mux.HandleFunc("/add", handlers.Add)
+	mux.HandleFunc("/delete", handlers.Delete)
+	mux.HandleFunc("/purge", handlers.Purge)
+	mux.HandleFunc("/login", handlers.Login)
+
+	server := &http.Server{
+		Addr:    "0.0.0.0:8080",
+		Handler: mux,
+	}
+
+	server.ListenAndServe()
 }
