@@ -18,6 +18,7 @@ func main() {
 	mux.HandleFunc("/delete", handlers.Delete)
 	mux.HandleFunc("/purge", handlers.Purge)
 	mux.HandleFunc("/login", handlers.Login)
+	mux.HandleFunc("/logout", handlers.Logout)
 
 	staticFiles := http.FileServer(http.Dir("./pub"))
 	mux.Handle("/pub/", http.StripPrefix("/pub", staticFiles))

@@ -28,3 +28,8 @@ func Purge(res http.ResponseWriter, req *http.Request) {
 func Login(res http.ResponseWriter, req *http.Request) {
 	res.Write([]byte("Login todo page"))
 }
+
+// Logout is the handler to log users out
+func Logout(res http.ResponseWriter, req *http.Request) {
+	res.Write([]byte("Logout todo page"))
+}
