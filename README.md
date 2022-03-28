@@ -1,3 +1,4 @@
 # Todo in Go
 
-Todo web app in Go.
+The obligatory Todo (web) app in Go. Built only with the standard library.
+
