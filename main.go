@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/craigmcdonaldcodes/todo-in-go/handlers"
@@ -28,5 +29,9 @@ func main() {
 		Handler: mux,
 	}
 
-	server.ListenAndServe()
+	err := server.ListenAndServe()
+
+	if err != nil {
+		fmt.Println("Failed to start web server:", err)
+	}
 }
